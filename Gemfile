@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
 end
 
 group :development do
@@ -40,6 +41,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-
+group :test do
+  gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.2'
+  gem 'faker'
+  gem 'database_cleaner'
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
