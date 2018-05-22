@@ -89,7 +89,7 @@ RSpec.describe 'Items API' do
 
     context 'when item exists' do
       it 'returns status code 204' do
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(204)
       end
 
       it 'updates the item' do
@@ -106,7 +106,7 @@ RSpec.describe 'Items API' do
       end
 
       it 'returns a not found message' do
-        expect(response.body).to match(/Couldn't find item/)
+        expect(response.body).to match(/Couldn't find Item/)
       end
     end
   end
