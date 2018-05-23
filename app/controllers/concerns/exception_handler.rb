@@ -20,6 +20,10 @@ module ExceptionHandler
 
     private
 
+    def four_twenty_two
+      json_response({ message: e.message }, :unprocessable_entity)
+    end
+    
     def unauthorized_request(e)
       json_response({ message: e.message }, :unauthorized)
     end
