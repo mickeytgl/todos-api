@@ -43,17 +43,6 @@ RSpec.describe AuthorizeApiRequest do
           )
         end
       end
-
-      context.skip 'when token is fake' do
-        let(:header) { { 'Authorization' => 'blablabla' } }
-        subject(:request_obj) { described_class.new(header) }
-
-        it 'handles JWT::DecodeError' do
-          expect { invalid_request_obj.call }.to raise_error(
-            ExceptionHandler::InvalidToken, /Not enough or too many segments/
-          )
-        end
-      end
     end
   end
 end

@@ -18,7 +18,7 @@ RSpec.describe ApplicationController, type: :controller do
       before { allow(request).to receive(:headers).and_return(invalid_headers) }
 
       it 'raises MissingToken error' do
-        expecgt { subject.instance_eval {authorize_request} }.to raise_error(ExceptionHandler::MissingToken, /Missing Token/)
+        expect { subject.instance_eval {authorize_request} }.to raise_error(ExceptionHandler::MissingToken, /Missing Token/)
       end
     end
   end
