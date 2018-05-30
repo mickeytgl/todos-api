@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jwt', '~> 2.1'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'will_paginate', '~> 3.1.0'
+gem 'faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -47,7 +48,6 @@ end
 group :test do
   gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.2'
-  gem 'faker'
   gem 'database_cleaner'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
